@@ -1,0 +1,338 @@
+$darkBlack: #4A4F5C;
+$lightBlack: #777c8b;
+$btnBlack: #4A4F5C;
+$btnHover: #585f6e;
+$btnActive: #697183;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    color: white;
+    background-color: #22252e;
+}
+
+#calculator {
+    position: absolute;
+    width: 320px;
+    min-width: 300px;
+    height: 590px;
+    min-height: 580px;
+    background-color: #373C4A;
+    border-radius: 20px;
+    z-index: 5;
+
+    #display {
+        padding: 5px 15px 0 15px;
+        width: 100%;
+        height: 170px;
+
+        .date,
+        .time {
+            color: $lightBlack;
+        }
+
+        .date {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .time {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .history {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: $lightBlack;
+        }
+
+        .operation {
+            position: absolute;
+            right: 0;
+            top: 100px;
+            margin-right: 15px;
+            display: flex;
+            height: 65px;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 4rem;
+        }
+
+    }
+
+    #buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        padding: 0 3px;
+        flex-direction: row;
+        width: 100%;
+        height: 70%;
+
+        .btn {
+            display: flex;
+            font-size: 2rem;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            height: 90%;
+            background-color: $lightBlack;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #8e93a7;
+            }
+
+            &:active {
+                background-color: #9da4bb;
+            }
+        }
+
+        .soma {
+            border-radius: 20px 0 0 0;
+        }
+
+        .divisao {
+            border-radius: 0 20px 0 0;
+        }
+
+        .igual {
+            background-color: #FF465F;
+            border-radius: 0 0 20px 0;
+
+            &:hover {
+                background-color: #ff6277;
+            }
+
+            &:active {
+                background-color: rgb(255, 119, 137);
+            }
+        }
+
+        .sound-on {
+            border-radius: 0 0 0 20px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .sound {
+            border-radius: 0 0 0 20px;
+
+            .sound-on {
+                width: 30px;
+                height: 30px;
+            }
+
+            .sound-off {
+                width: 30px;
+                height: 30px;
+            }
+
+            .disable{
+                display: none;
+            }
+        }
+
+        .soma {
+            background-color: $btnBlack;
+
+            &:hover {
+                background-color: $btnHover;
+            }
+
+            &:active {
+                background-color: $btnActive;
+            }
+        }
+
+        .subtracao {
+            background-color: $btnBlack;
+
+            &:hover {
+                background-color: $btnHover;
+            }
+
+            &:active {
+                background-color: $btnActive;
+            }
+        }
+
+        .multiplicacao {
+            background-color: $btnBlack;
+
+            &:hover {
+                background-color: $btnHover;
+            }
+
+            &:active {
+                background-color: $btnActive;
+            }
+        }
+
+        .divisao {
+            background-color: $btnBlack;
+
+            &:hover {
+                background-color: $btnHover;
+            }
+
+            &:active {
+                background-color: $btnActive;
+            }
+        }
+
+        .ac {
+            background-color: $btnBlack;
+
+            &:hover {
+                background-color: $btnHover;
+            }
+
+            &:active {
+                background-color: $btnActive;
+            }
+        }
+
+        .ce {
+            background-color: $btnBlack;
+
+            &:hover {
+                background-color: $btnHover;
+            }
+
+            &:active {
+                background-color: $btnActive;
+            }
+        }
+
+        .porcento {
+            background-color: $btnBlack;
+
+            &:hover {
+                background-color: $btnHover;
+            }
+
+            &:active {
+                background-color: $btnActive;
+            }
+        }
+
+    }
+}
+
+#waves1 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    .wave-1, .wave-2, .wave-3 {
+        position: absolute;
+        transform: rotate(212deg);
+        top: -12%;
+        left: 0;
+        width: 200%;
+        height: 60vh;
+    }
+
+    .wave-1{
+        opacity: 75%;
+        background: url('../img/wave-1.svg');
+        animation: animate 8s linear infinite;
+        z-index: 1;
+    }
+
+    .wave-2 {
+        opacity: 30%;
+        background: url('../img/wave-2.svg');
+        animation: animate 5s linear infinite;
+        z-index: 2;
+    }
+
+    .wave-3 {
+        opacity: 20%;
+        background: url('../img/wave-3.svg');
+        animation: animate 2s linear infinite;
+        z-index: 2;
+    }
+
+}
+
+#waves2 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .wave-1, .wave-2, .wave-3 {
+        position: absolute;
+        transform: rotate(32deg);
+        top: 50%;
+        left: -100%;
+        width: 170%;
+        height: 60vh;
+    }
+    
+    .wave-1 {
+        opacity: 75%;
+        background: url('../img/wave-1.svg');
+        animation: animate 10s linear infinite;
+        z-index: 3;
+    }
+
+    .wave-2 {
+        opacity: 30%;
+        background: url('../img/wave-2.svg');
+        animation: animate 8s linear infinite;
+        z-index: 2;
+    }
+
+    .wave-3 {
+        opacity: 20%;
+        background: url('../img/wave-3.svg');
+        animation: animate 6s linear infinite;
+        z-index: 1;
+    }
+
+}
+
+@keyframes animate{
+
+    0%{
+        background-position-x: 0;
+    }
+
+    100%{
+        background-position-x: 1920px;
+    }
+
+}

@@ -1,0 +1,385 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  background-color: #22252e;
+}
+
+#calculator {
+  position: absolute;
+  width: 320px;
+  min-width: 300px;
+  height: 590px;
+  min-height: 580px;
+  background-color: #373C4A;
+  border-radius: 20px;
+  z-index: 5;
+}
+
+#calculator #display {
+  padding: 5px 15px 0 15px;
+  width: 100%;
+  height: 170px;
+}
+
+#calculator #display .date,
+#calculator #display .time {
+  color: #777c8b;
+}
+
+#calculator #display .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+}
+
+#calculator #display .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+#calculator #display .history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #777c8b;
+}
+
+#calculator #display .operation {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 65px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+}
+
+#calculator #buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 70%;
+}
+
+#calculator #buttons .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  height: 90%;
+  background-color: #777c8b;
+  cursor: pointer;
+}
+
+#calculator #buttons .btn:hover {
+  background-color: #8e93a7;
+}
+
+#calculator #buttons .btn:active {
+  background-color: #9da4bb;
+}
+
+#calculator #buttons .soma {
+  border-radius: 20px 0 0 0;
+}
+
+#calculator #buttons .divisao {
+  border-radius: 0 20px 0 0;
+}
+
+#calculator #buttons .igual {
+  background-color: #FF465F;
+  border-radius: 0 0 20px 0;
+}
+
+#calculator #buttons .igual:hover {
+  background-color: #ff6277;
+}
+
+#calculator #buttons .igual:active {
+  background-color: #ff7789;
+}
+
+#calculator #buttons .sound-on {
+  border-radius: 0 0 0 20px;
+}
+
+#calculator #buttons .sound-on img {
+  width: 30px;
+  height: 30px;
+}
+
+#calculator #buttons .sound {
+  border-radius: 0 0 0 20px;
+}
+
+#calculator #buttons .sound .sound-on {
+  width: 30px;
+  height: 30px;
+}
+
+#calculator #buttons .sound .sound-off {
+  width: 30px;
+  height: 30px;
+}
+
+#calculator #buttons .sound .disable {
+  display: none;
+}
+
+#calculator #buttons .soma {
+  background-color: #4A4F5C;
+}
+
+#calculator #buttons .soma:hover {
+  background-color: #585f6e;
+}
+
+#calculator #buttons .soma:active {
+  background-color: #697183;
+}
+
+#calculator #buttons .subtracao {
+  background-color: #4A4F5C;
+}
+
+#calculator #buttons .subtracao:hover {
+  background-color: #585f6e;
+}
+
+#calculator #buttons .subtracao:active {
+  background-color: #697183;
+}
+
+#calculator #buttons .multiplicacao {
+  background-color: #4A4F5C;
+}
+
+#calculator #buttons .multiplicacao:hover {
+  background-color: #585f6e;
+}
+
+#calculator #buttons .multiplicacao:active {
+  background-color: #697183;
+}
+
+#calculator #buttons .divisao {
+  background-color: #4A4F5C;
+}
+
+#calculator #buttons .divisao:hover {
+  background-color: #585f6e;
+}
+
+#calculator #buttons .divisao:active {
+  background-color: #697183;
+}
+
+#calculator #buttons .ac {
+  background-color: #4A4F5C;
+}
+
+#calculator #buttons .ac:hover {
+  background-color: #585f6e;
+}
+
+#calculator #buttons .ac:active {
+  background-color: #697183;
+}
+
+#calculator #buttons .ce {
+  background-color: #4A4F5C;
+}
+
+#calculator #buttons .ce:hover {
+  background-color: #585f6e;
+}
+
+#calculator #buttons .ce:active {
+  background-color: #697183;
+}
+
+#calculator #buttons .porcento {
+  background-color: #4A4F5C;
+}
+
+#calculator #buttons .porcento:hover {
+  background-color: #585f6e;
+}
+
+#calculator #buttons .porcento:active {
+  background-color: #697183;
+}
+
+#waves1 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#waves1 .wave-1, #waves1 .wave-2, #waves1 .wave-3 {
+  position: absolute;
+  -webkit-transform: rotate(212deg);
+          transform: rotate(212deg);
+  top: -12%;
+  left: 0;
+  width: 200%;
+  height: 60vh;
+}
+
+#waves1 .wave-1 {
+  opacity: 75%;
+  background: url("../img/wave-1.svg");
+  -webkit-animation: animate 8s linear infinite;
+          animation: animate 8s linear infinite;
+  z-index: 1;
+}
+
+#waves1 .wave-2 {
+  opacity: 30%;
+  background: url("../img/wave-2.svg");
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+  z-index: 2;
+}
+
+#waves1 .wave-3 {
+  opacity: 20%;
+  background: url("../img/wave-3.svg");
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+  z-index: 2;
+}
+
+#waves2 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#waves2 .wave-1, #waves2 .wave-2, #waves2 .wave-3 {
+  position: absolute;
+  -webkit-transform: rotate(32deg);
+          transform: rotate(32deg);
+  top: 50%;
+  left: -100%;
+  width: 170%;
+  height: 60vh;
+}
+
+#waves2 .wave-1 {
+  opacity: 75%;
+  background: url("../img/wave-1.svg");
+  -webkit-animation: animate 10s linear infinite;
+          animation: animate 10s linear infinite;
+  z-index: 3;
+}
+
+#waves2 .wave-2 {
+  opacity: 30%;
+  background: url("../img/wave-2.svg");
+  -webkit-animation: animate 8s linear infinite;
+          animation: animate 8s linear infinite;
+  z-index: 2;
+}
+
+#waves2 .wave-3 {
+  opacity: 20%;
+  background: url("../img/wave-3.svg");
+  -webkit-animation: animate 6s linear infinite;
+          animation: animate 6s linear infinite;
+  z-index: 1;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1920px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1920px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
